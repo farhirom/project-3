@@ -1,0 +1,194 @@
+/*------------------flex-box----------------*/
+body{
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-header{
+  align-self: stretch;
+}
+.main-footer{
+  flex:1;
+}
+body,
+.container,
+.field-1{
+  display:flex;
+  flex-direction: column;
+}
+
+.field-2{
+  display:flex;
+  flex-direction: column;
+}
+
+#zip-code{
+  margin-right: auto;
+}
+
+@media(min-width: 768px){
+  .field-1{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .field-1 label{
+    flex: 0 120px;
+    margin-right: 2em;
+  }
+  .field-1 input:not(#zip-code),
+  .field-1 select{
+    flex:1;
+    width: 400px;
+  }
+}
+
+/*----------------margin, padding, border, color-------------------*/
+body,
+select{
+    font-family: 'Merriweather', serif;
+}
+
+.main-header{
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+}
+
+form,
+.sub-header{
+  width: 100%;
+  max-width: 600px;
+}
+
+.sub-header{
+  border-bottom:4px solid black;
+  margin-bottom: 5px;
+}
+
+.sub-header p{
+  margin-top:0;
+  padding-top: .5em;
+
+}
+
+select,
+.sub-header p,
+.main-footer{
+  color: rgb(211,211,211);
+}
+
+option,
+optgroup{
+  color:black;
+}
+
+.sub-header h2{
+  margin-bottom:0;
+  padding-bottom: 0;
+}
+
+form{
+  border-top:2px solid black;
+}
+
+fieldset{
+  padding:0;
+  border: none;
+}
+
+.fieldset-1{
+  border-bottom: 2px solid black;
+  padding-bottom: 3em;
+}
+
+legend{
+  padding-top: 1.5em;
+  padding-bottom: .9em;
+}
+
+
+legend,
+.field-1,
+.field-2,
+.field-2 label,
+.field-2 input,
+.field-2 textarea{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.field-1 input,
+.field-1 select,
+.field-2 textarea{
+  background-color: rgba(211,211,211,.5);
+  border-radius: 3px;
+  border: none;
+}
+
+.field-1 input[placeholder]{
+  text-align: right;
+  padding-right: .5em;
+}
+
+
+.field-1 label{
+  padding: .5em 0;
+}
+
+.field-1 input,
+.field-1 select{
+  padding: 1.4em 0;
+}
+
+.field-2 textarea{
+  height: 6em;
+}
+
+button{
+  padding: 0;
+  width:100%;
+  height: 50px;
+  background-color: #3acec2;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+/*----------------text-----------------------*/
+
+.main-header{
+  text-transform: uppercase;
+}
+
+
+.main-header,
+.sub-header,
+.main-footer{
+  text-align: center;
+}
+
+legend{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+legend,
+.field-1 label,
+form [placeholder],
+select,
+.box,
+.main-footer{
+  text-transform: capitalize;
+}
+
+.sub-header :first-letter,
+.field-2 :first-letter{
+  text-transform: capitalize;
+}
+
+/*---------------:focus*/
+select:focus,
+input:focus,
+textarea:focus{
+  background-color: white;
+}
